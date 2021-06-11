@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  header, footer { 
+    flex: none; 
+  }
+  
+  main {
+    display: flex;
+    flex: 1 0 auto;
+    flex-grow: 1;
+  }
+
+  /* navigation */
+
+  .main-nav,
+  .sub-nav {
+      display: flex;
+  }
+
+  .main-nav {
+      background-color:rgb(102, 102, 199);
+      justify-content: space-between;
+      font-family: 'Dosis', sans-serif;;
+  }
+
+  .short-width {
+      display: flex;
+  }
+
+  .nav-list {
+      display: flex;
+      list-style-type: none;
+  }
+
+  .nav-list li a {
+      padding: 5px;
+      border-right: white solid 1px;
+      text-decoration: none;
+      color: white;
+  }
+
+  .nav-list li:last-of-type a {
+      border-right: none;
+  }
+
+  .search-form {
+      width: 100%;
+      display: flex;
+  }
+
+  .search-form input, button {
+      padding: 5px;
+      border: none;
+  }
+
+  .search-form input {
+      border-bottom: 2px solid rgb(102, 102, 199);
+      flex-grow: 0.8;
+      height: 50%;
+      margin-top: 20px;
+  }
+
+  button i {
+    margin-top: 10px;
+    background-color: rgb(100, 100, 212);
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+  }
+
+  .company-name {
+      font-size: 40px;
+      margin: 10px;
+      padding-left: 40px;
+      padding-right: 40px;
+  }
+
+  .sub-nav a {
+      display: flex;
+      margin: 15px;
+      text-decoration: none; 
+      color: white;
+      background-color: red;
+      border-radius: 15px;
+      padding: 5px;
+      transition: 0.3s;
+  }
+
+  .sub-nav a:hover {
+    background-color: rgb(255, 253, 253);
+    color: red;
+    border: black solid 2px;
+  }
+
+  .full-width {
+    display: none;
+}
+
+  /* Categories */
+
+ nav.categories {
+     display: flex;
+     flex-direction: column;
+     padding-top: 20px;
+    flex: 0 0 256px;
+  }
+
+  .categories > a {
+      text-decoration: none;
+      font-family: 'Dosis', sans-serif;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      background-color: #44b;
+      color: white;
+  }
+
+  .categories > a:hover {
+      box-shadow: 0 2px 5px -2px black;
+  }
+
+  /* items */
+
+  .items {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      font-family: 'Open Sans', sans-serif;
+      align-items: flex-start;
+      flex-grow: 1;
+      padding-top: 20px;
+  }
+
+  .item {
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 40%;
+      margin-right: 15px;
+      margin-left: 15px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      max-width: 70%;
+  }
+
+  .item:hover {
+    box-shadow: 0 2px 5px -2px black;
+}
+
+.item-name,
+.fact-line {
+    background-color: rgb(141, 141, 245);
+    padding: 5px;
+    color: white;
+}
+
+.item-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.add-item {
+    background-color: rgb(102, 102, 199);
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.fact-line,
+.item-description {
+    font-weight: bold;
+    padding: 5px;
+}
+
+.item-description {
+    text-align: center;
+    background-color:blanchedalmond;
+}
+
+.fact-line {
+    font-size: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+
+
+  /* Footer */
+
+  footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      justify-content: space-around;
+      background-color: #255;
+      padding: 18px;
+      font-family: 'Dosis', sans-serif;
+  }
+
+  footer section {
+      margin-right: 10px;
+      display: flex;
+      flex-direction: column;
+  }
+
+  footer section:last-child {
+      margin-right: 0;
+  }
+
+  footer h2 {
+      color: white;
+      border-bottom: white solid;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      font-size: 15px;
+      letter-spacing: 5px;
+  }
+
+  footer a {
+      font-size: 13px;
+      text-decoration: none;
+      font-weight: bolder;
+      margin-bottom: 8px;
+      color: white;
+  }
+
+  footer a:hover {
+      border-bottom: 1px solid white;
+      margin-bottom: 7px;
+  }
+
+  /* Media Queries */
+
+  @media screen and (max-width:850px) {
+
+      div.item > h3.item-name,
+       p.fact-line,
+        p.item-description {
+          font-size: 25px;
+      }
+
+      .items {
+          max-width: 75%;
+      }
+
+      .item {
+          flex-basis: 100%;
+          max-width: 80%;
+      }
+
+      .items {
+          flex-flow: column wrap;
+      }
+  }
+
+  @media screen  and (min-width: 768px) {
+      .short-width {
+          display: none;
+      }
+
+      .full-width {
+          display: flex;
+      }
+  }
